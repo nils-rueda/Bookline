@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Usuario</title>
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="bookline.css">  
+    <!-- JavaScript abajo del todo -->
+</head>
+
+<body>
+   <!-- LOGIN: html, css ------------------------------------------------------ -->
+
+  <form action="login.php" method="POST" class="login">     
+      <legend> LOGIN </legend> <br><br>
+      
+      <label for="usu">Nombre de usuario:</label>       
+      <input type="text" id="usu" name="usuario" value="" placeholder="Nombre de usuario"> <br> <br>
+      
+      <label for="pass">Contraseña: </label>
+      <input type="password" id="pass" name="password" value="" placeholder="Escribe tu contraseña"><br><br>
+      
+      <button type="submit" id="boton_login" name="submit" value="..."> Loguéate </button>
+      <!-- Sobre el <button>: Antes tenías un <input type="submit">, pero es aburrido, voy a usar un <button> para poder editarlo en CSS (el submit no se edita en CSS)-->
+  </form>
+
+</body>
+
+    <!-- JavaScript externo -->
+    <script src="bookline.js"> </script>
+
+</html>

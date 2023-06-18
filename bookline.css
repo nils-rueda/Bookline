@@ -1,0 +1,375 @@
+
+/* Usados en "index.html""--------------------------------------------------------------*/
+
+* {   /*Lo pone todo más bonito, tipo web. Evita márgenes inútiles en el extremo de arriba, por ejemplo. */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* box-sizing allows us to include the padding and border in an element's total width and height.*/
+  font-family: sans-serif;
+}
+
+section { /* Afectará al tag <section> */
+  width: 100%; /* Extiende la cabecera, en horizontal, hasta el final de la página*/
+  height: 55vh; /* vw/vh (relative) units: "vw-wh are relative to the width/height of the browswer window. 100vw = full width of the screen. Use it for bigger layouts, like background. It's useful for responsive websites bc everything scales. */
+}
+
+section header {  /* CLAVE !! */
+  display: flex;  /*Alinea los dos <p> subordinados a .btn*/
+  align-items: center; /*Se supone q los coloca en el centro, pero si lo quito, sigue igual...*/
+  justify-content: space-around;  /* (w3s) "space-around" value: Items will have space before, between, and after them. --> crea espacio entre los elementos alineados (como justificar el texto en word, misma idea, pero con elementos)..*/
+
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);   /*Crea el sombreado inferior de la cabecera, <section><header> */
+}
+
+section header .logo_bookline {  /*Va a modificar el título del banner, Bookline */ 
+  font-size: 30px;
+  font-weight: bold;
+
+  color: black;
+  text-decoration: none;  /*Quita el subrayado que genera <a>. */
+
+  margin: 15px;
+}
+
+section header .logo_bookline span {  /*Va a modificar el título del banner, Bookline */ 
+  color: blue;
+}
+
+section header div a {
+  color:black;  /*Colo de la letra de los elementos del header.*/
+  text-decoration: none;
+}
+
+section header ul {
+  list-style: none;   /*Para quitar las 'bullets' de cada elemento <li> de la <ul>. */
+}
+
+section header ul li {  /* CLAVE! --> La lista vertical pasa a horizontal: los elementos <li> de la lista se alinean*/
+  display: inline-block; /*Esta es la clave! Lo alinea.*/
+  margin: 5px 5px;    /*Crea espacio entre los <li>. Cuando pone 2 cifras: la 1a es 'top & bottom', y la 2a es 'right & left'. Si pusiera 4, el orden sería: top, right, bottom, left. Si pusiera 3: top, right, bottom. Si pusiera 1: los 4 lados tienen el mismo valor. */
+  padding: 5px 20px;  /* Idem que el anterior. */
+}
+
+section header ul li a {  /* Modificamos cada <a> (cada uno dentro de un <li> para cambiar su color de hipervínculo, azul, a negro.*/
+  color: black;
+  text-decoration: none; ;  /*Quita el subrayado que genera <a>. */
+}
+
+section header ul li a:hover {  /* ":hover"-> Para que cambie el color del texto cuando el ratón lo sobrevuele. */
+  color: rgb(37, 162, 212); 
+} 
+
+#btnRegistro {
+  cursor: pointer; /* convierte el puntero del ratón en una mano cuando se pose sobre el Sign Up.*/
+  transition: 0.3s; /* creo que es para suavizar el cambio del cursor al posarse sobre el Sign Up*/
+
+  padding: 10px 15px; /*Cuando pone 2 cifras: la 1a es 'top & bottom', y la 2a es 'right & left'. Si pusiera 4, el orden sería: top, right, bottom, left. Si pusiera 3: top, right, bottom. Si pusiera 1: los 4 lados tienen el mismo valor.*/
+
+  border: transparent;
+  border-radius: 30px;
+
+  text-decoration: none; /*Quita el subrayado que genera <a>. */
+}
+
+#btnRegistro a {
+  text-decoration: none; /*Quita el subrayado que genera <a>. */
+}
+
+#btnLogin {
+  cursor: pointer; /* convierte el puntero del ratón en una mano cuando se pose sobre el Sign Up.*/
+  transition: 0.3s; /* creo que es para suavizar el cambio del cursor al posarse sobre el Sign Up*/
+
+  padding: 10px 15px; /*Cuando pone 2 cifras: la 1a es 'top & bottom', y la 2a es 'right & left'. Si pusiera 4, el orden sería: top, right, bottom, left. Si pusiera 3: top, right, bottom. Si pusiera 1: los 4 lados tienen el mismo valor.*/
+
+  border: 1px solid blue;
+  border-radius: 30px;
+}
+
+#btnLogin:hover {    /* Para iluminar el Sign Up cuando se pose el ratón sobre él.*/
+  color: white;
+  background: rgb(37, 162, 212); 
+}
+
+/* --------------------------------------------------------------------------------- */
+.divTexto h1 {
+  position: absolute; 
+  top: 20%;
+  left: 4%;
+
+  font-size: 80px;   /*Ojo, esto es lo que está marcando el tamaño del título "Librería Online", y no el "<h1>". Creo que usa <h1> simplemente como indicador de que es título, pero no para marcar tamaño, pues eso lo hacemos aquí.*/
+  
+  color:rgb(69, 53, 161)
+}
+
+.divTexto p {
+  position: absolute; /* ??? */
+  width: 700px;   /* Para acotar el ancho del Texto */
+  top: 35%; /* para distanciar el texto del top de... el título anterior? (margin-top lo distanciaría del tope de la página compelta). */
+  
+  margin-top: 40px;
+  margin-left: 4%; /* para distanciar el texto del margen izquierdo de la página. Aunque podrías poner sólo left, el tutorial puso sólo left. */
+  line-height: 26px;
+  
+  text-align: justify; /* Simplemente: para justificar el texto (como en Word). */
+}
+
+.divImagenLado img {
+  width: 450px;
+  position: absolute;
+
+  top: 130px;
+  left: 55%;
+  margin-left: 80px; 
+
+  border: solid rgb(37, 162, 212); 
+  border-width: 2px;
+  border-radius: 3%;
+}
+
+/* --------------------------------------------------------------------------------- */
+.container {
+  margin-top: 70px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  width: 150px;
+  height: 200px;
+  border: 1px solid rgb(32, 45, 158);
+  margin: 10px;
+  background-color: rgb(211, 197, 224);
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  padding: 13%;
+}
+
+/* ==========================================0 OLD creo... */
+.divPresentacion h1 {
+  margin-top: 30px;
+}
+
+.divPresentacion p {
+  font-family: sans-serif;
+  background-color: aliceblue;
+  font-size: medium;
+
+  width: 800px;
+  margin-top: 20px;
+  margin-left: 5%;
+  
+  padding: 1.5%;
+  border: solid rgb(74, 74, 132);
+  border-radius: 5px;
+
+  text-align: justify;
+}
+
+
+
+#boton_registro {
+  border-radius: 5px;
+  size: 30%;
+  color: white;
+  background-color: blue;
+  padding: 10px;
+}
+
+#boton_login {
+  border-radius: 5px;
+  size: 30%;
+  color: white;
+  background-color: green;
+  padding: 10px;
+}
+
+footer {
+  margin-top: 3%;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+footer div {
+  margin-left: 15px;
+  padding: 10px;
+}
+
+footer div ul li {
+  padding: 8px;
+}
+
+/* Los menús de registro y login, tras hace click en el botón de index:*/
+.registro {     /* se usa en el "div" interno al <form> del menú de "registro" */
+  background-color:rgb(170, 170, 204);
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+  border: 1px solid rgb(26, 152, 190);
+  border-radius: 5px;
+
+}
+
+.registro input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login {        /* se usa en el "div" interno al <form> del menú de "login" */
+  background-color:rgb(206, 235, 225);
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+  border: 1px solid rgb(22, 78, 30);
+  border-radius: 5px;
+}
+
+.login input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+/* Usados en varios: 1) "log_cliente.php" , 2) "log_empleado.php" y 3) "log_administrador", y 4) "compras-ventas.php" */
+.body_log_cliente {
+    font-family: 'Garamond';
+    font-size:20px;
+    background-image: url("imagenes/books4.png");
+  }
+
+.div_titulo {
+    background-color: blanchedalmond;
+    border-style:ridge;
+    border-radius:15px;
+    border-width: 5px;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 500px;
+    margin-bottom: 30px;
+}
+
+.div_titulo ul li {
+  padding: 5px;
+}
+
+.tabla_log_cliente {
+    background-color: whitesmoke;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 750px;
+    margin-bottom: 30px;
+}
+
+/* Usados sólo en "log_empleado.php"-------------------------------------------------------------------*/
+.body_log_empleado {
+    font-family: sans-serif;
+    font-size: 15px;
+    background-image: url("imagenes/books3.png");
+  }
+
+  
+
+.tabla_nuevo_libro {
+  background-color: whitesmoke;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 300px;
+  margin-bottom: 30px;
+}
+
+.tabla_stock_libros {
+    background-color: whitesmoke;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 300px;
+    margin-bottom: 30px;
+}
+
+
+/* Usados sólo en "log_administrador.php"-------------------------------------------------------------------*/
+.body_log_admin {
+  font-family: 'Garamond';
+  font-size:20px;
+  background-image: url("imagenes/blue_clear.png");
+  border-radius: 10px;
+}
+
+.tabla_usuarios {
+  background-color: whitesmoke;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 400px;
+  margin-bottom: 30px;
+}
+
+/* Usados en 1) "accion_cliente.php", 2) "accion_empleado.php", y 3) "accion_administrador.php" -------------------------------------------------------------------*/
+.sms_exito {
+  margin: auto;
+  background-color:palegreen;
+  font-size: large;
+  font-weight: 100;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+  width: 50%;
+  border: 5px solid;
+  border-radius:15px;
+  padding: 15px;
+}
+
+/* Usado sólo en "accion_empleado.php" -------------------------------------------------------------------*/
+.sms_stock {
+  margin: auto;
+  background-color:lightskyblue;
+  font-size: large;
+  font-weight: 100;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+  width: 50%;
+  border: 5px solid;
+  border-radius:15px;
+  padding: 15px;
+}
+
+
+/* Usado sólo en "compras-ventas.php" -------------------------------------------------------------------*/
+.body_comprasventas {
+  font-family: 'Garamond';
+  font-size:20px;
+  background-image: url("imagenes/old_library.png");
+}
+
+.tabla_comprasventas {
+  background-color:powderblue;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 50px;
+  margin-right: 550px;
+  margin-bottom: 30px;
+}
+
+.boton_negro {
+  background-color: black;
+  color:white;
+  padding: 5px;
+  border-radius: 10px;
+}

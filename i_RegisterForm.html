@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuario</title>
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="bookline.css">  
+    <!-- JavaScript abajo del todo. -->
+
+</head>
+<body>
+
+      <!-- REGISTRO: html, css ------------------------------------------------------ -->
+  <form action="registro.php" method="POST" class="registro">                
+      <legend> REGISTRO </legend><br><br>  
+
+      <label for="correo">Introduce tu email: </label> 
+      <input type="email" id="correo" name="email" value="" placeholder="Email @"><br><br>
+
+      <label for="pass">Crea una contraseña:</label>
+      <input type="password" id="pass" name="password" value="" placeholder="Contraseña"><br><br>
+
+      <label for="usu">Crea un nombre de usuario (alias):</label>
+      <input type="text" id="usu" name="usuario" value="" placeholder="Nombre de usuario"> <br><br>
+
+      <bustton type="submit" id="boton_registro" name="submit" value="...'"> Regístrate </button> 
+        <!-- Sobre el <button>: Antes tenías un <input type="submit">, pero es aburrido, voy a usar un <button> para poder editarlo en CSS (el submit no se edita en CSS)-->
+  </form>
+    
+</body>
+
+    <!-- JavaScript externo -->
+    <script src="bookline.js"> </script>
+
+</html>

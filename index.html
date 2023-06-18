@@ -1,0 +1,73 @@
+<!DOCTYPE html>  
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="bookline.css"> 
+    
+    <!--ADVERTENCIAS -->
+      <!-- El enlace a JavaScript está abajo del todo.-->
+      <!-- OJO** : veo que, si llamo "index.html" a este archivo, el navegador lo abrirá directamente. Si no, abrirá la lista de archivos previo, de todo el proyecto.-->
+</head>
+
+<body>
+  <section>   <!-- No sé por qué, pero es clave poner <section> antes de <header> para que quede bien... ?? E incluir divs debajo del header, todo wrapped up en 1 section... raro. ¿No suple la función del BODY?-->
+    <header>
+        <a href="#" class="logo_bookline"> Book<span>line</span></a>
+        <ul>
+          <li><a href="#" id="atrezzo1"> Novedades </a></li>
+          <li><a href="#" id="atrezzo2"> Libros </a></li>
+          <li><a href="#" id="atrezzo3"> Contacto </a></li>
+        </ul>
+        <!-- Uso 2 formas diferentes de redirigir (uno con JavaScript, el otro con puro HTML), para aprender los 2 sistemas. El registro va con puro HTML, y el login con JavaScript..-->
+        <button id="btnRegistro"> <a href="i_RegisterForm.html">Regístrate</a></button>
+        <button id="btnLogin">Inicia sesión</button>
+    </header>
+    <div class="divTexto">
+      <h1>Librería Online</h1>
+      <p>
+        Creemos que  las librerías del siglo XXI deben digitalizarse.  
+        Para que la literatura y el ensayo mantengan su presencia en nuestras sociedades 
+        del siglo XXI, resulta imprescindible que las librerías estemos a la vanguardia, 
+        y por ello, como librería especializada desde hace años en todo tipo de géneros, 
+        hemos decidido migrar por completo al mundo digital. 
+        ¡Bienvenid@ nuestro espacio!
+      </p>
+    </div>
+    <div class="divImagenLado"> 
+      <img src="imagenes/books1.jpg">
+    </div>
+  </section> <!--Ahora ya fuera del <section> ! Así aparece debajo del <section>, no arriba, tapando texto. -->
+  <div class="container">
+    <div class="box">
+      <img src="imagenes/libro1.png">
+    </div>
+    <div class="box">
+      <img src="imagenes/libro2.png">
+    </div>
+    <div class="box">
+      <img src="imagenes/libro3.png">
+    </div>
+  </div>
+</body>
+
+
+<footer>   <!-- FOOTER: Información de contacto (footer) ------------------------------------------------------ -->
+  <div>
+    <h3>Contacto:<h3>
+      <hr>
+      <ul>
+        <li>Email: <a href="www.#">bookline.spain@xmail.com</a></li>
+        <li>Nº de teléfono: 0034 91 999 99 99</li>
+        <li>Dirección postal</u>: C/turing, nº 5, Madrid, Madrid.</li>
+      </ul>  
+  </div>
+
+
+</footer>
+
+<!-- JavaScript externo: 1) Te faltaba el "type="text/javascript". 2) Tenías que ponerlo abajo del todo para que funcionara." -->
+<script type="text/javascript" src="bookline.js"></script>
+
+</html>

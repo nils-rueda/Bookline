@@ -14,7 +14,7 @@ btnLogin_JS.addEventListener('click', function() {
 
 
 /*  *********** Atrezzos ***********
-(no consigo hacerlo con .getElementByClassName()): */
+
 
 var atrezzo1_JS = document.getElementById("atrezzo1");
 var atrezzo2_JS = document.getElementById("atrezzo2");
